@@ -34,7 +34,6 @@ for data_file in os.listdir(data_folder):
 
             data_file_path = os.path.join(data_folder, data_file)
             try:
-                data_df = pd.read_csv(data_file_path, sep='\t')
                 data_df = pd.read_fwf(data_file_path, widths=column_widths, names=column_names)
                 print(f"Data for {data_file}:")
                 print(data_df.dtypes)
