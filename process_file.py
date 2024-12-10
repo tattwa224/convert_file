@@ -2,7 +2,6 @@ import os
 import pandas as pd
 import json
 import logging
-from typing import Dict
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
