@@ -26,7 +26,7 @@ for data_file in os.listdir(data_folder):
                 continue
 
             try:
-                spec_df = pd.read_csv(spec_file, sep=',')
+                spec_df = pd.read_csv(spec_file, sep=',', encoding='utf-8')
             except Exception as e:
                 print(f"Error reading specification file {spec_file}: {e}")
                 continue
@@ -39,7 +39,8 @@ for data_file in os.listdir(data_folder):
 
             data_file_path = os.path.join(data_folder, data_file)
             try:
-                data_df = pd.read_fwf(data_file_path, widths=column_widths, names=column_names, dtype=dtypes)
+                data_df = pd.read_fwf(data_file_path, widths=column_widths, names=column_names, dtype=dtypes,
+                                      encoding='utf-8')
             except Exception as e:
                 print(f"Error reading data file {data_file_path}: {e}")
                 continue
