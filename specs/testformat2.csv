@@ -1,0 +1,5 @@
+column name,width,datatype
+user,10,TEXT
+postcode,5,TEXT
+in_network,1,BOOLEAN
+allowed_amount,5,INTEGER
